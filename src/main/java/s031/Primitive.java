@@ -7,7 +7,7 @@ public class Primitive {
 
         char c = 'A';
         System.out.println(c);
-
+        
         byte y = 42;
         System.out.println(y);
 
