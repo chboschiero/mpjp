@@ -6,7 +6,6 @@ public class SwitchEnum {
         WeekendDay day = WeekendDay.SATURDAY;
 
         // ...
-
         switch (day) {
         case SATURDAY:
             System.out.println("No alarm clock today");
