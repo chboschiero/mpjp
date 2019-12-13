@@ -3,14 +3,14 @@ package s050;
 public class AboutStringBuilder {
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder();
-        StringBuilder sb2 = new StringBuilder(20);
+        StringBuilder sb2 = new StringBuilder(20); // il numero è la capacità dello string builder
         StringBuilder sb3 = new StringBuilder("hello");
         
         System.out.println("capacity 1: " + sb.capacity());
         System.out.println("capacity 2: " + sb2.capacity());
         System.out.println("capacity 3: " + sb3.capacity());
         
-        System.out.println("appending: " + sb3.append(' ').append("world"));
+        System.out.println("appending: " + sb3.append(' ').append("world")); // posso fare un "trenino" di chiamata (perché append è un metodo che mi ritorna un riferimento a se stesso)
         
         System.out.println("char at position 1 in sb3 is '" + sb3.charAt(1) + "'");
         
@@ -18,7 +18,7 @@ public class AboutStringBuilder {
         
         System.out.println("index of \"elo\": " + sb3.indexOf("elo"));
         
-        System.out.println("inserting \"lo c\" at 3: " + sb3.insert(3, "lo c"));
+        System.out.println("inserting \"lo c\" at 3: " + sb3.insert(3, "lo c"));// permette di inserire una stringa a partire da una data posizione
         
         System.out.println("current sb3 length: " + sb3.length());
         
