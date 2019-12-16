@@ -103,7 +103,7 @@ public class S58 {
 			return true;
 		} else {
 			return false;
-		}
+		} 
 	}
 
 	/**
@@ -117,7 +117,6 @@ public class S58 {
 	public static int[] sort(int a, int b, int c) {
 		int[] result = new int[3];
 
-		// TODO
 
 		return result;
 	}
