@@ -16,10 +16,17 @@ class S57Test {
     }
 
     @Test
+    void speedPlain2() {
+        double actual = S57.speed(100, 2);
+
+        assertEquals(actual, 50.0);
+    }
+
+    @Test
     void speedInfinity() {
         double actual = S57.speed(100, 0);
 
-        assertThat(actual, is(Double.POSITIVE_INFINITY));
+        assertThat(actual, is(Double.POSITIVE_INFINITY)); // questo Double è una classe wrapper per tutto ciò che è relativo ai primitivi double
     }
 
     @Test
