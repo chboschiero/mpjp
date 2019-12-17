@@ -84,10 +84,9 @@ public class S58 {
 			return 'D';
 		} else if (percentile > 50) {
 			return 'E';
-		} else if (percentile <= 50) {
+		} else {
 			return 'F';
 		}
-		return 0;
 	}
 
 	/**
@@ -99,11 +98,11 @@ public class S58 {
 	public static boolean isLeapYear(int year) {
 		if (year % 400 == 0) {
 			return true;
-		} else if ((year % 4 == 0) && ! (year % 100 == 0)) {
+		} else if ((year % 4 == 0) && (year % 100 != 0)) {
 			return true;
 		} else {
 			return false;
-		} 
+		}
 	}
 
 	/**
@@ -116,8 +115,35 @@ public class S58 {
 	 */
 	public static int[] sort(int a, int b, int c) {
 		int[] result = new int[3];
-
-
+		if (a < b) {
+			if (c < a) {
+				result[0] = c;
+				result[1] = a;
+				result[2] = b;
+			} else if (c > b) {
+				result[0] = a;
+				result[1] = b;
+				result[2] = c;
+			} else {
+				result[0] = a;
+				result[1] = c;
+				result[2] = b;
+			}
+		} else if (a > b) {
+			if (c > a) {
+				result[0] = b;
+				result[1] = a;
+				result[2] = c;
+			} else if (c < b) {
+				result[0] = c;
+				result[1] = b;
+				result[2] = a;
+			} else {
+				result[0] = b;
+				result[1] = c;
+				result[2] = a;
+			}
+		}
 		return result;
 	}
 }

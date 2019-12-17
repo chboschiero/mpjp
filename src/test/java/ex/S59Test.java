@@ -8,83 +8,96 @@ import org.junit.jupiter.api.Test;
 
 class S59Test {
 
-    @Test
-    void sumPositive() {
-        long actual = S59.sum(1, 3);
+	@Test
+	void sumPositive() {
+		long actual = S59.sum(1, 3);
 
-        assertThat(actual, is(6L));
-    }
+		assertThat(actual, is(6L));
+	}
 
-    @Test
-    void sumNegPos() {
-        long actual = S59.sum(-3, 3);
+	@Test
+	void sumBillion() {
+		long actual = S59.sum(2_000_000_000, 2_000_000_001);
 
-        assertThat(actual, is(0L));
-    }
+		assertThat(actual, is(4_000_000_001L));
+	}
 
-    @Test
-    void sumSingle() {
-        long actual = S59.sum(1003, 1003);
+	@Test
+	void sumNegPos() {
+		long actual = S59.sum(-3, 3);
 
-        assertThat(actual, is(1003L));
-    }
+		assertThat(actual, is(0L));
+	}
 
-    @Test
-    void sumEmpty() {
-        long actual = S59.sum(1003, 1002);
+	@Test
+	void sumSingle() {
+		long actual = S59.sum(1003, 1003);
 
-        assertThat(actual, is(0L));
-    }
+		assertThat(actual, is(1003L));
+	}
 
-    @Test
-    void evenSumPositive() {
-        long actual = S59.evenSum(1, 3);
+	@Test
+	void sumEmpty() {
+		long actual = S59.sum(1003, 1002);
 
-        assertThat(actual, is(2L));
-    }
+		assertThat(actual, is(0L));
+	}
 
-    @Test
-    void evenSumNegPos() {
-        long actual = S59.evenSum(-3, 3);
+	@Test
+	void evenSumPositive() {
+		long actual = S59.evenSum(1, 3);
 
-        assertThat(actual, is(0L));
-    }
+		assertThat(actual, is(2L));
+	}
 
-    @Test
-    void evenSumSingle() {
-        long actual = S59.evenSum(1002, 1002);
+	@Test
+	void evenSumNegPos() {
+		long actual = S59.evenSum(-3, 3);
 
-        assertThat(actual, is(1002L));
-    }
+		assertThat(actual, is(0L));
+	}
 
-    @Test
-    void evenSumEmpty() {
-        long actual = S59.evenSum(1003, 1002);
+	@Test
+	void evenSumSingle() {
+		long actual = S59.evenSum(1002, 1002);
 
-        assertThat(actual, is(0L));
-    }
+		assertThat(actual, is(1002L));
+	}
 
-    @Test
-    void factorialFour() {
-        long actual = S59.factorial(4);
+	@Test
+	void evenSumEmpty() {
+		long actual = S59.evenSum(1003, 1002);
 
-        assertThat(actual, is(24L));
-    }
+		assertThat(actual, is(0L));
+	}
 
-    @Test
-    void factorialNegative() {
-        long actual = S59.factorial(-4);
+	@Test
+	void factorialFour() {
+		long actual = S59.factorial(4);
 
-        assertThat(actual, is(0L));
-    }
+		assertThat(actual, is(24L));
+	}
 
-    @Test
-    void fibonacci() {
-        fail("Not yet implemented");
-    }
+	@Test
+	void factorialNegative() {
+		long actual = S59.factorial(-4);
 
-    @Test
-    void multiplicationTable() {
-        fail("Not yet implemented");
-    }
+		assertThat(actual, is(0L));
+	}
+
+	@Test
+	void fibonacci() {
+		long actual = S59.fibonacci(6);
+
+		assertThat(actual, is(8L));
+	}
+
+	@Test
+	void multiplicationTable() {
+		int[][] actual = S59.multiplicationTable(3);
+
+		assertThat(actual[0][0], is(1));
+		assertThat(actual[2][2], is(9));
+	}
+
 }
