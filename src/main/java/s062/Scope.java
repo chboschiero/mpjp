@@ -22,6 +22,6 @@ public class Scope {
 		System.out.println(local);
 		staticMember = 12;
 		Scope scope = new Scope();
-		scope.f();
+
 	}
-}
+} 
