@@ -11,8 +11,17 @@ public class Dog extends Pet {
         super(name);
         this.speed = speed;
     }
+    public Dog(String name, String color, double speed) {
+        this(name, speed);
+        this.color = color;
+    }
 
     public double getSpeed() {
         return speed;
     }
+    
+    @Override
+	public String toString() {
+		return "S75Dog " + super.toString() + speed;
+	}
 }

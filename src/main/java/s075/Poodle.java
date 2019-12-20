@@ -11,6 +11,7 @@ public class Poodle extends Dog {
 
 	public Poodle(String name) {
 		super(name);
+		this.curlDensity = DEFAULT_DENSITY;
 	}
 
 	public Poodle(String name, int weight) {
