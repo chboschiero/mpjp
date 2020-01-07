@@ -70,10 +70,11 @@ public class S60 {
 	 * @return a new array holding the same elements of input, in reversed order
 	 */
 	public static int[] reverse(int[] data) {
-		int[] result = new int[0];
-
-		// TODO
-
+		int[] result = new int[data.length];
+		
+		for (int i = data.length - 1, j = 0; i >= 0; i--, j++) {
+			data[i] = result[j];
+		}
 		return result;
 	}
 
@@ -84,8 +85,13 @@ public class S60 {
 	 * @return the average
 	 */
 	public static double average(int[] data) {
-		// TODO
-		return 0;
+		double sum = 0;
+
+		for (int i = 0; i < data.length; i++) {
+			sum += data[i];
+		}
+
+		return sum / data.length;
 	}
 
 	/**
@@ -95,7 +101,12 @@ public class S60 {
 	 * @return the largest value
 	 */
 	public static int max(int[] data) {
-		// TODO
-		return 0;
+		int max = Integer.MIN_VALUE;
+		for (int item : data) {
+			if (item > max) {
+				max = item;
+			}
+		}
+		return max;
 	}
 }
