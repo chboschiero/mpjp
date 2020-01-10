@@ -96,8 +96,20 @@ class S59Test {
 	void multiplicationTable() {
 		int[][] actual = S59.multiplicationTable(3);
 
-		assertThat(actual[0][0], is(1));
-		assertThat(actual[2][2], is(9));
-	}
+		int[][] expected = { { 1, 2, 3 }, { 2, 4, 6 }, { 3, 6, 9 } };
 
+		assertEquals(expected.length, actual.length);
+		for (int i = 0; i < expected.length; i++) {
+			assertEquals(expected[i].length, actual[i].length);
+		}
+		for (int i = 0; i < expected.length; i++) {
+			for (int j = 0; i < expected.length; i++) {
+				assertEquals(expected[i][j], actual[i][j]);
+			}
+
+			assertThat(actual[0][0], is(1));
+			assertThat(actual[2][2], is(9));
+		}
+
+	}
 }

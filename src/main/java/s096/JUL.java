@@ -22,11 +22,11 @@ public class JUL {
         Locale.setDefault(new Locale("en", "EN"));
         Logger log = Logger.getLogger("sample");
 
-        someLog();
+   //     someLog();
 
         ConsoleHandler handler = new ConsoleHandler();
-        handler.setLevel(Level.ALL);
-        log.setLevel(Level.ALL);
+        handler.setLevel(Level.SEVERE);
+        log.setLevel(Level.SEVERE);
         log.addHandler(handler);
         log.setUseParentHandlers(false);
 
