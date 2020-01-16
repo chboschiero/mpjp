@@ -1,5 +1,5 @@
 -- join on 3 tables
-select employee_id, city, department_name
+select concat(last_name, ' ', first_name) as Employee, city, STREET_ADDRESS
 from employees join departments using(department_id)
 join locations using(location_id);
 
