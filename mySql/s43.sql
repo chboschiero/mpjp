@@ -31,7 +31,8 @@ select max(tmp.avg_sal) from (
 -- average salaries for each department, excluding the topmost one
 select department_id, round(avg(salary))
 from employees
-group by department_id having avg(salary) < (select max(x.sal) from (
+group by department_id 
+having avg(salary) < (select max(x.sal) from (
 	select avg(salary) sal
 	from employees
 	group by department_id) x)
