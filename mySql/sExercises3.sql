@@ -73,6 +73,8 @@ from employees
 where MANAGER_ID = (select EMPLOYEE_ID from employees where LAST_NAME = 'King' and first_name = 'Steven')
 order by 1;
 
+use me;
+
 
 
 

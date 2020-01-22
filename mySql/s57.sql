@@ -20,6 +20,14 @@ create table details (
 -- when in doubt, do not run the next line
 drop table details;
 
-insert into details values();
+insert into details (detail_id, status, name, coder_id)
+values(13, 'x', 'Chiara', 19);
+
+insert into details (detail_id, status, name, coder_id)
+values(11, 'A', 'Valeria', 18);
+insert into details (detail_id, status, name, coder_id)
+values(11, 'A', 'Valeria', 18);
+
+
 
 select * from details;
